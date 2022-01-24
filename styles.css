@@ -17,6 +17,17 @@ body {
 p {
   color: grey;
 }
+.logo {
+  width: 80%;
+  display: block;
+  margin: 0 auto;
+}
+.logo-img {
+  width: 100%;
+  height: auto;
+
+  padding-top: 20px;
+}
 
 #heading {
   text-transform: uppercase;
@@ -114,7 +125,7 @@ p {
 }
 
 .fs-title {
-  font-size: 25px;
+  font-size: 18px;
   color: var(--primary-color);
   margin-bottom: 15px;
   font-weight: normal;
@@ -127,7 +138,7 @@ p {
 }
 
 .steps {
-  font-size: 25px;
+  font-size: 18px;
   color: gray;
   margin-bottom: 10px;
   font-weight: normal;
