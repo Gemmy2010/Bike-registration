@@ -163,30 +163,10 @@ p {
 #progressbar li {
   list-style-type: none;
   font-size: 15px;
-  width: 25%;
+  width: 20%;
   float: left;
   position: relative;
   font-weight: 400;
-}
-
-#progressbar #account:before {
-  font-family: FontAwesome;
-  content: "\f13e";
-}
-
-#progressbar #personal:before {
-  font-family: FontAwesome;
-  content: "\f007";
-}
-
-#progressbar #payment:before {
-  font-family: FontAwesome;
-  content: "\f030";
-}
-
-#progressbar #confirm:before {
-  font-family: FontAwesome;
-  content: "\f00c";
 }
 
 #progressbar li:before {
@@ -229,4 +209,104 @@ p {
 .fit-image {
   width: 100%;
   object-fit: cover;
+}
+
+.select-wrapper {
+  position: relative;
+  user-select: none;
+  width: 100%;
+}
+.select {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border-width: 0 2px 0 2px;
+  border-style: solid;
+  border-color: ;
+}
+.select__trigger {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 22px;
+  font-size: 18px;
+  font-weight: 300;
+  height: 45px;
+  line-height: 60px;
+  background: #eceff1;
+  cursor: pointer;
+
+  border: 1px solid #ccc;
+}
+.custom-options {
+  position: absolute;
+  display: block;
+  top: 100%;
+  left: 0;
+  right: 0;
+  border: 2px solid #ccc;
+  border-top: 0;
+  background: #fff;
+  transition: all 0.5s;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  z-index: 2;
+}
+.select.open .custom-options {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: all;
+}
+.custom-option {
+  position: relative;
+  display: block;
+  padding: 0 22px 0 22px;
+  font-size: 22px;
+  font-weight: 300;
+  color: #3b3b3b;
+  line-height: 60px;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+.custom-option:hover {
+  cursor: pointer;
+  background-color: #ccc;
+}
+.custom-option.selected {
+  color: #ffffff;
+  background-color: var(--primary-color);
+}
+.arrow {
+  position: relative;
+  height: 15px;
+  width: 15px;
+}
+.arrow::before,
+.arrow::after {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  width: 0.15rem;
+  height: 100%;
+  transition: all 0.5s;
+}
+.arrow::before {
+  left: -5px;
+  transform: rotate(45deg);
+  background-color: #ccc;
+}
+.arrow::after {
+  left: 5px;
+  transform: rotate(-45deg);
+  background-color: #ccc;
+}
+.open .arrow::before {
+  left: -5px;
+  transform: rotate(-45deg);
+}
+.open .arrow::after {
+  left: 5px;
+  transform: rotate(45deg);
 }
